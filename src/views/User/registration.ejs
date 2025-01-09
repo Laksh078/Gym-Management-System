@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/signup.css">
+    <link rel="stylesheet" href="/public/css/navbar.css">
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <div class="main">
+        <%- include('../layouts/header') %>
+
+
+         <div class="container">
+            <div class="login-form">
+                <form action="/signup" method="post">
+                    <div class="login-text">Sign Up</div>
+                    <div class="signup-grid">
+                        <input type="text" placeholder="First Name" name="firstname" class="username" required>
+                        <input type="text" placeholder="Last Name" name="lastname" class="username" required>
+                        <input type="text" placeholder="Phone Number" name="phone" class="username" required>
+                        <input type="email" placeholder="Email" name="email" class="username" required>
+                        <input type="number" placeholder="Age" name="age" class="username" required>
+                        <label for="" id="gender-label">
+                            <input type="radio" placeholder="Gender" id="male" name="gender" value="Male" required>
+                            <label for="male">Male</label>
+                            <input type="radio" placeholder="Gender" id="female" name="gender" value="Female" required>
+                            <label for="female">Female</label>
+                        </label>
+                        <label for="" id="label-password">
+                            <input type="password" placeholder="Passowrd" id="password" name="password">
+                            <img src="assets/images/eye.svg" alt="" id="show" class="password-img-1">
+                        </label>
+                        <label for="" id="label-password">
+                            <input type="password" placeholder="Confirm Passowrd" id="password1" name="confirmpassword">
+                            <img src="assets/images/eye.svg" alt="" id="show1" class="password-img-2">
+                        </label>
+                    </div>
+                    <%
+                        
+                           if (typeof message  !== 'undefined') {
+                            %>
+                                <div class="registration-message" style=" color: #97fb57;text-align: left;margin-top: 5px;margin-bottom: 5px;"><%= message %></div>
+                            <%
+                           }
+
+                        %>
+                    <div class="dont-have-account">
+                        
+                        <div>Already have an account? &nbsp;</div> <a href="/login">Log In</a>
+                    </div>
+                    <input type="submit" id="submit" value="Sign Up">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/public/javascript/login.js"></script>
+</body>
+
+</html>

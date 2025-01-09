@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+}
+table{
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 97%;
+    color: #97fb57;
+    text-align: center;
+    border-spacing: 5px;
+    border: 1px solid #97fb57;
+    font-size: 1.1rem;
+    border-collapse: collapse;
+}
+td,th{
+    border: 1px solid #97fb57;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+img{
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+}
+.add-user{
+    border: 1px solid #97fb57;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 1.5%;
+    color: #97fb57;
+    background-color: rgba(0, 0, 0, 0.151);
+    text-decoration: none;
+}
+/* .action-btns-div{
+    margin-top: 10px;
+} */
+.action-btns{
+    text-decoration: none;
+    color: #97fb57;
+    border: 1px solid #97fb57;
+    padding: 3px;
+    border-radius: 7px;
+}
+form{
+    width: fit-content;
+    margin: 20px;
+    text-align: center;
+    border: 1px solid #97fb57;
+    border-radius: 10px;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#search-field{
+    width: 400px;
+    height: 38px;
+    border: none;
+    background-color: transparent;
+    text-indent: 10px;
+    color: #97fb57;
+    font-size: 1rem;
+    
+}
+#search-field:focus{
+    outline: none;
+}
+#search-field::placeholder{
+    color: #97fb57;
+}
+#search-btn{
+    width: 100px;
+    height: 43px;
+    border: none;
+    background-color: #1c86ff;
+    color: #97fb57;
+    font-size: 1.25rem;
+    position: relative;
+    border-left: 1px solid #97fb57;
+    border-top-right-radius:10px;
+    border-bottom-right-radius:10px;
+}
+.pagination-btns{
+    margin-left: 1.5%;
+    margin: 20px;
+    text-align: center;
+}
+.page-number-btn{
+    background-color: transparent;
+    text-decoration: none;
+    color: #97fb57;
+    border: 1px solid #97fb57;
+    margin: 5px;
+    padding: 10px;
+}
+.previous-next-btn{
+    border: 1px solid #97fb57;
+    padding: 10px;
+    text-decoration: none;
+    color: #97fb57;
+}

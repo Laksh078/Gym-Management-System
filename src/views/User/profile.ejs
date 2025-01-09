@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/profile.css">
+    <link rel="stylesheet" href="/public/css/trial.css">
+    <link rel="stylesheet" href="/public/css/navbar.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Your Profile</title>
+</head>
+
+<body>
+    <%- include('../layouts/home_header') %>
+        <div class="main">
+            <div class="heading">Your Dashboard</div>
+            <div class="main-profile">
+                <div class="user-photo-info">
+                    <div class="user-photo">
+                        <img src="../../public/userImages/<%= userInfo.image %>" alt="Profile Photo" class="profile-photo">
+                    </div>
+                    <div class="userinfo">
+                        <table class="user-info-table">
+                            <tr class="table-info-row">
+                                <td>Name:</td>
+                                <td class="table-info-data"><%= userInfo.firstname+' '+userInfo.lastname %></td>
+                            </tr>
+                            <tr class="table-info-row">
+                                <td>Email:</td>
+                                <td class="table-info-data"><%= userInfo.email %></td>
+                            </tr>
+                            <tr class="table-info-row">
+                                <td>Phone :</td>
+                                <td class="table-info-data"><%= userInfo.phone %></td>
+                            </tr>
+                            <tr class="table-info-row">
+                                <td>Role :</td>
+                                <td class="table-info-data">
+                                    <% if (userInfo.is_admin == 1) { %>
+                                    <div>Admin</div>
+                                    <% } else { %>
+                                    <div>User</div>
+                                <% } %></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="user-progress">
+                    <div class="heading-progress">
+                        Your Progress
+                    </div>
+                    <div class="table-progress">
+                        <table>
+                            <tr class="table-info-row">
+                                <form action="/profile" method="post">
+                                <td>Height:</td>
+                                <td class="table-info-data"><% if (userInfo.height == null) { %>
+                                    <input type="text" name="height" id="" placeholder="Enter Your Height" class="input-table">
+                                    
+                                <% } else { %>
+                                    <input type="text" name="height" id="" value="<%= userInfo.height %>"  class="input-table">
+                                <% } %></td>
+                            </tr>
+                            <tr class="table-info-row">
+                                <td class="table-info-row">Weight:</td>
+                                <td class="table-info-data">
+                            
+
+                                    <% if (userInfo.weight == null) { %>
+                                        <input type="text" name="weight" id="" placeholder="Enter Your Weight" class="input-table">
+                                        
+                                        <% } else { %>
+                                            <input type="text" name="weight" id="" value="<%= userInfo.weight %>" class="input-table">
+                                            <% } %>
+                                        </td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="hidden" name="id" id="" value="<%= userInfo._id %>">
+                                    </td>
+                                    <td class="update-btn-td">
+                                        <input type="submit" value="Update" class="table-btn">
+                                        
+                                    </td>
+                                    
+                                </tr>
+                            </form>
+                            <tr>
+                                <td class="table-row-data">BMI:</td>
+                                <td class="table-info-data">
+                                    <% if(userInfo.bmi == null){
+                    
+                                    } else{
+                                        %>
+                                        <%= userInfo.bmi.toFixed(2) %>
+                                        ( <% if(userInfo.bmi < 18.5){
+                                            %>
+                                                UnderWeight
+                                            <%
+                                        } else if((userInfo.bmi > 18.5) && (userInfo.bmi < 24.9)){
+                                            %>
+                                                Normal Weight
+                                            <%
+                                        } else if((userInfo.bmi > 25) && (userInfo.bmi < 29.9)){
+                                            %>
+                                                Overweight
+                                            <%
+                                        } else{
+                                            %>
+                                                Obese
+                                            <%
+                                        }
+                                         %>
+                                        )
+                                        <%
+                                    }%>
+                                        
+                                </td>
+                            </tr>
+                        </table>
+                        <canvas id="bmiChart" height="280px" style="margin-top: 10px;"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    <%- include('../layouts/footer') %>
+
+    <script>
+
+    const bmiHistory = <%- JSON.stringify(bmiHistory) %>; 
+
+    const dates = bmiHistory.map(entry => entry.date);
+    const bmis = bmiHistory.map(entry => entry.bmi);
+
+    const ctx = document.getElementById('bmiChart').getContext('2d');
+    const bmiChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: dates,  // X-axis (dates)
+            datasets: [{
+                label: 'BMI Over Time',
+                data: bmis,  // Y-axis (BMI values)
+                backgroundColor: '#97fb57',
+                borderColor: '#97fb57',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: false,
+                    title: {
+                        display: true,
+                        text: 'BMI'
+                    }
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Date'
+                    }
+                }
+            }
+        }
+    });
+</script>
+
+    <script src="/public/javascript/index.js"></script>
+    <script src="/public/javascript/navbar.js"></script>
+</body>
+
+</html>

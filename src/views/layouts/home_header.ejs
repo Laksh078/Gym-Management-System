@@ -1,0 +1,46 @@
+<nav class="nav">
+    <img src="/public/assets/images/1048852.svg" alt="">
+    <div class="nav-items">
+        <a href="/index">Home</a>
+        <a href="/membership">Memberships</a>
+        <a href="/products">Products</a>
+        <a href="/apply">Apply For Selling</a>
+        <input type="checkbox" name="" id="profile-image-checkbox" class="profile-image-checkbox" >
+        <img src="/public/userImages/<%= userInfo.image %>" alt="" class="profile-image" >
+    </div>
+    
+            <input type="checkbox" name="" id="profile-image-checkbox-phone" class="profile-image-checkbox" >
+            <img src="/public/userImages/<%= userInfo.image %>" alt="" class="profile-image" id="profile-image">
+        
+
+    <input type="checkbox" class="three-lines-checkbox">
+    <div class="three-lines">
+        <div class="first-line"></div>
+        <div class="second-line"></div>
+        <div class="third-line"></div>
+    </div>
+
+<div class="dropdown">
+    <div class="nav-dropdown-items">
+        <a href="/index">Home</a>
+        <a href="/membership">Memberships</a>
+        <a href="/products">Products</a>
+        <a href="/apply">Apply For Selling</a>
+    </div>
+</div>
+<div class="dropdown-profile" id="dropdown-profile">
+    <div class="nav-dropdown-items-profile">
+        <a href="/profile">Your Dashboard</a>
+        <a href="/edit?id=<%= userInfo._id %>">Update Profile</a>
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+<div class="dropdown-profile" id="dropdown-profile-phone" style="z-index: 5;">
+    <div class="nav-dropdown-items-profile">
+        <a href="/profile">Your Dashboard</a>
+        <a href="/edit?id=<%= userInfo._id %>">Update Profile</a>
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+
+</nav>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/navbar.css">
+    <link rel="stylesheet" href="/public/css/signup.css">
+    <link rel="stylesheet" href="/public/css/footer.css">
+    <title>Admin - Add user</title>
+</head>
+<body>
+    
+    <div class="main"></div>
+    <%- include('../layouts/admin_header') %>
+
+
+         <div class="container">
+            <div class="login-form" style="margin-top: 10px;">
+                <form action="" method="post" style="top: 20px;">
+                    <div class="login-text">Add New User</div>
+                    <div class="signup-grid">
+                        <input type="text" placeholder="First Name" name="firstname" class="username" required>
+                        <input type="text" placeholder="Last Name" name="lastname" class="username" required>
+                        <input type="text" placeholder="Phone Number" name="phone" class="username" required>
+                        <input type="email" placeholder="Email" name="email" class="username" required>
+                        <input type="number" placeholder="Age" name="age" class="username" required>
+                        <label for="" id="gender-label">
+                            <input type="radio" placeholder="Gender" id="gender" name="gender" value="Male" required>Male
+                            <input type="radio" placeholder="Gender" id="gender" name="gender" value="Female" required>Female
+                        </label>
+                    </div>
+                    <%
+                        
+                           if (typeof message  !== 'undefined') {
+                            %>
+                                <div class="registration-message" style=" color: red;text-align: left;margin-top: 5px;margin-bottom: 5px;"><%= message %></div>
+                            <%
+                           }
+
+                        %>
+                
+                    <input type="submit" id="submit" value="Add User">
+                </form>
+            </div>
+        </div>
+    </div>
+    <%- include('../layouts/admin_footer') %>
+    <script src="/public/javascript/navbar.js"></script>
+</body>
+</html>

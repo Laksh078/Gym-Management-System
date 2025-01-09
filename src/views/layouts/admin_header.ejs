@@ -1,0 +1,35 @@
+<nav class="nav">
+    <img src="/public/assets/images/1048852.svg" alt="">
+    <div class="nav-items">
+        <a href="/admin/home">Home</a>
+        <a href="/admin/dashboard">Users Dashboard</a>
+        <a href="/admin/selling-application">Seller Applications</a>
+        <a href="/admin/product-manager">Product Manager</a>
+
+        <input type="checkbox" name="" id="profile-image-checkbox" class="profile-image-checkbox">
+        <img src="../../public/userImages/<%= admin.image %>" alt="" class="profile-image">
+    </div>
+    <input type="checkbox" class="three-lines-checkbox">
+    <div class="three-lines">
+        <div class="first-line"></div>
+        <div class="second-line"></div>
+        <div class="third-line"></div>
+    </div>
+
+<div class="dropdown">
+    <div class="nav-dropdown-items">
+        <a href="/admin/home">Home</a>
+        <a href="/admin/dashboard">Users Dashboard</a>
+        <a href="/admin/selling-application">Seller Applications</a>
+        <a href="/admin/product-manager">Product Manager</a>
+    </div>
+</div>
+<div class="dropdown-profile" id="dropdown-profile">
+    <div class="nav-dropdown-items-profile">
+        <a href="/admin/profile">Your Dashboard</a>
+        <a href="/admin/edit?id=<%= admin._id %>">Update Profile</a>
+        <a href="/admin/logout">Logout</a>
+    </div>
+</div>
+
+</nav>

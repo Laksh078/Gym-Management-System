@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/public/css/login.css">
+    <link rel="stylesheet" href="/public/css/navbar.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>Admin - Edit Users</title>
+</head>
+<body>
+    <%- include('../layouts/admin_header') %>
+
+    <div class="container" style="margin-bottom: 20px;">
+        <div class="login-form" >
+            <form action="" method="post" style="margin-bottom: 20px;">
+                <div class="login-text">Edit Users</div>
+                <label for="">                    
+                    <input type="text" placeholder="First Name" id="username" name="firstname" value="<%= user.firstname %>" required>
+                </label>
+                <label for="">                    
+                    <input type="text" placeholder="Last Name" id="username" name="lastname" value="<%= user.lastname %>" required>
+                </label>
+                <label for="">                    
+                    <input type="text" placeholder="Email" id="username" name="email">
+                </label>
+                <label for="">                    
+                    <input type="text" placeholder="Phone Number" id="username" name="phone" value="<%= user.phone %>" required>
+                </label>
+                <label for="" style="color: #97fb57;">  
+                    <label for="verify">Verified
+                        
+                        <input type="radio" name="verify" value="1" id="verify" <% if(user.is_verified == 1){%> checked <%} %>> 
+                    </label>                  
+                    <label for="not-verify">Not Verified
+                        <input type="radio" name="verify" value="0" id="not-verify" <% if(user.is_verified == 0){%> checked <%} %> >
+
+                    </label>                  
+                </label>
+                <input type="submit" id="submit" value="Update User"> 
+                <input type="hidden" name="id" value="<%= user._id %>">
+                
+            </form>
+        </div>
+    </div>
+</div>
+<%- include('../layouts/admin_footer') %>
+
+</body>
+</html>

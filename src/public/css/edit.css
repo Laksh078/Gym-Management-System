@@ -1,0 +1,189 @@
+#UploadButton{
+    display: none;
+}
+.UploadButton-label{
+    background-color: #97fb57;
+    padding: 10px 20px;
+    align-items: center;
+    display: flex;
+    gap: 5px;
+    border-radius: 10px;
+    width: fit-content;
+}
+.profile-photo-text{
+    color: #97fb57;
+    font-size: 1.5rem;
+}
+.profile-photo{
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    justify-content: center;
+}
+.edit-main{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: 50px;
+    align-items: center;
+}
+table{
+    text-align: left;
+    border-spacing: 40px 0;
+}
+.input-firstname{
+    width: inherit;
+    height: 35px;
+    font-size: 1.125rem;
+    border-radius: 5px;
+    outline: none;
+    border: 0;
+    margin-top: 5px;
+    text-indent: 5px;
+}
+.input-firstname::placeholder{
+    font-size: 1.125rem;
+}
+.submit-profile{
+    width: fit-content;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    border: 0;
+    background-color: #97fb57;
+    border-radius: 5px;
+}
+.change-password{
+    text-decoration: none;
+    color: black;
+    border:1px solid #97fb57;
+    background-color: #97fb57;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    margin-top: -30px;
+}
+.imagePreview{
+    position: static;
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+*{
+    margin: 0;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    background-color: #121212;
+}
+
+.main nav img{
+    width: 100px;
+}
+#show{
+    width: 25px;
+    position: absolute;
+    top: 105px;
+    right: 45px;
+    margin-top: 5px;
+    z-index: 11;
+    background-color: white;
+}
+.login-form form{
+    background-color: #3131317a;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border: 1px solid #97fb57;
+    border-radius: 5px;
+    position: relative;
+    top: 15vh;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.login-text{
+    color: #fff;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+.dont-have-account{
+    display: flex;
+    font-size: 0.875rem;
+    margin-right: auto;
+    margin-left: 11%;
+    margin-top: 7px;
+    color: #fff;
+}
+.dont-have-account a{
+    color: #97fb57;
+}
+#username,#password,#password1{
+    width: 270px;
+    height: 35px;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 13px;
+    border: none;
+    text-indent: 10px;
+}
+#username:focus{
+    outline: none;
+    outline: 1px solid #97fb57;
+}
+#password:focus,#password1:focus{
+    outline: none;
+    outline: 1px solid #97fb57;
+}
+
+#edit-update-profile-btn{
+    font-size: 1rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border: 1px solid #97fb57;
+    border-radius: 20px;
+    width: 150px;
+    height: 40px;
+    background-image: linear-gradient(to bottom right, #121212 , #12121286);
+    color: #fff;
+}
+.registration-message{
+    color: #97fb57;
+    text-align: left;
+    margin-left: 0;
+}
+.forget-password-item{
+    color: #97fb57;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    font-size: 0.8rem;
+    margin-top: -5px;
+}
+.forget-password-item a{
+    text-decoration: none;
+    color: #97fb57;
+}
+.forget-password{
+    color: #97fb57;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    font-size: 0.8rem;
+    margin-top: 0px;
+}

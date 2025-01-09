@@ -1,0 +1,14 @@
+.text-large{
+    font-size: 7rem;
+    color: #97fb57;
+}
+.main-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+.main-text img{
+    margin-bottom: -40px;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/navbar.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/dashboard.css">
+    <title>Admin - Seller Application</title>
+</head>
+<body>
+    <%- include('../layouts/admin_header') %>
+    <div class="form">
+        <form action="">
+            <input type="text" placeholder="Search Name or Email" name="search" id="search-field">
+            <input type="submit" value="Search" id="search-btn">
+        </form>
+    </div>
+
+    
+
+    <div>
+        <% if (typeof message !== 'undefined') {
+            %>
+                <h2 style="color: red; margin: 1.5%; "><%= message %></h2>
+            <%
+        }  %>
+        <% if (typeof messageSuccess !== 'undefined') {
+            %>
+                <h2 style="color: #97fb57; margin: 1.5%; "><%= messageSuccess %></h2>
+            <%
+        }  %>
+        <% if (typeof messageAddSuccess !== 'undefined') {
+            %>
+                <h2 style="color: #97fb57; margin: 1.5%; "><%= messageAddSuccess %></h2>
+            <%
+        }  %>
+        <% if (typeof messageUpdateSuccess !== 'undefined') {
+            %>
+                <h2 style="color: #97fb57; margin: 1.5%; "><%= messageUpdateSuccess %></h2>
+            <%
+        }  %>
+    </div>
+    <table style="table-layout: auto;">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+
+        <% 
+        
+            if (users.length > 0) {
+                for (let i = 0; i < users.length; i++) {
+                    %>
+                        <tr>
+                            <td><%= users[i].firstname %></td>    
+                            <td><%= users[i].lastname %></td>    
+                            <td><%= users[i].email %></td>    
+                            <td><%= users[i].phone %></td>       
+                            <td style="min-width: 50%;"><%= users[i].description %></td>
+                            <td>
+                                <div class="action-btns-div">
+                                    <a href="/admin/approve-seller?id=<%= users[i]._id %>" class="action-btns">Approve</a>
+                                </div>
+                                <div class="action-btns-div" style="margin-top: 15px;">
+                                    <a href="/admin/deny-seller?id=<%= users[i]._id %>" class="action-btns" style="color: red; margin-top: 20px;">Deny</a>    
+                                </div>
+                                
+                                
+                            </td>
+                        </tr>
+                    <%
+                    
+                }
+            } 
+            else{
+                %>
+                <tr>
+                    <td colspan="5">No Application Found</td>    
+                </tr>
+                <%
+            }
+
+        %>
+    </table>
+    <br>
+    <div class="pagination-btns">
+        <a href="?search=<%= search %>&page=<%= previousPage %>" class="previous-next-btn">Previous</a>
+    <%
+        for(let a = 1; a <= totalPages; a++) {
+            %>
+            <a href="?search=<%= search %>&page=<%= a %>" class="page-number-btn"><%= a %></a>
+            <%
+        }
+    %>
+    <a href="?search=<%= search %>&page=<%= nextPage %>" class="previous-next-btn">Next</a>
+    </div>
+    
+
+    <%- include('../layouts/admin_footer') %>
+    <script src="/public/javascript/navbar.js"></script>
+</body>
+</html>

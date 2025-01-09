@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/profile.css">
+    <link rel="stylesheet" href="/public/css/trial.css">
+    <link rel="stylesheet" href="/public/css/navbar.css">
+    <title>Admin - Profile</title>
+</head>
+<body>
+    <%- include('../layouts/admin_header') %>
+        <div class="main" style="padding-left: 10%;">
+            <div class="heading">Your Dashboard</div>
+            <div class="main-profile" style="justify-content: left;">
+                <div class="user-photo-info">
+                    <div class="user-photo">
+                        <img src="../../public/userImages/<%= admin.image %>" alt="Profile Photo" class="profile-photo">
+                    </div>
+                    <div class="userinfo">
+                        <table class="user-info-table">
+                            <tr class="table-info-row">
+                                <td>Name:</td>
+                                <td class="table-info-data"><%= admin.firstname+' '+admin.lastname %></td>
+                            </tr>
+                            <tr class="table-info-row">
+                                <td>Email:</td>
+                                <td class="table-info-data"><%= admin.email %></td>
+                            </tr>
+                            <tr class="table-info-row">
+                                <td>Phone :</td>
+                                <td class="table-info-data"><%= admin.phone %></td>
+                            </tr>
+                            <tr class="table-info-row">
+                                <td>Role :</td>
+                                <td class="table-info-data">
+                                    <% if (admin.is_admin == 1) { 
+                                        %>
+                                        <div>Admin</div>
+                                        <%
+                                    } else { 
+                                        %>
+                                        <div>User</div>
+                                        <% 
+                                    } %>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="user-progress">
+                    <div class="heading-progress">
+                                    Admin Info
+                                </div>
+                                <div class="table-progress">
+                                    <table style="font-size: 1.25rem; text-align: left;">
+                                        <tr class="table-info-row">
+                                                <td>Total Accounts (Including Admins):</td>
+                                                <td class="table-info-data">
+                                                    <%= count %>
+                                                </td>
+                                        </tr>
+                                        <tr class="table-info-row">
+                                            <td class="table-info-row">Total Accounts (Excluding Admins):</td>
+                                            <td class="table-info-data">
+                                                <%= countAdmin0 %>
+                                            </td>     
+                                        </tr>
+                                        <tr class="table-info-row">
+                                            <td class="table-info-row">Total Accounts (Admins):</td>
+                                            <td class="table-info-data">
+                                                <%= countAdmin %>
+                                            </td>     
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="hidden" name="id" id="" value="<%= admin._id %>">
+                                            </td>
+                                        </tr>
+                                            
+                                        <tr>
+                                            <td>Total Verified Users:</td>
+                                            <td class="table-info-data">
+                                                <%= countVerified %>
+                                            </td>
+                                        </tr>
+                                        <tr style="color: red;">
+                                            <td>Total Unverified Users:</td>
+                                            <td class="table-info-data">
+                                                <%= countVerified0 %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total Trial Forms Submitted:</td>
+                                            <td class="table-info-data">
+                                                <%= countTrial %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total Seller Applcation Pending:</td>
+                                            <td class="table-info-data">
+                                                <%= countSellerApplication %>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    <%- include('../layouts/admin_footer') %>
+    <script src="/public/javascript/index.js"></script>
+    <script src="/public/javascript/navbar.js"></script>
+</body>
+</html>

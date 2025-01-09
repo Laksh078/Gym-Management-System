@@ -1,0 +1,243 @@
+.main{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.heading{
+    color: #97fb57;
+    font-size: 2rem;
+    margin-top: 30px;
+    margin-bottom: -20px;
+}
+.profile-photo{
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin-top: 20px;
+}
+.user-photo-info{
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    max-width: 420px;
+    width: 30%;
+    justify-content: center;
+    display: flex;
+    padding: 20px;
+    border-radius: 10px;
+    flex-direction: column;
+    margin: 50px;
+    top: 20px;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 8;
+}
+.user-photo-info::before{
+    content: "";
+    background-image: linear-gradient(#97fb57,#00ffb3 , #97fb57);
+    width: 170%;
+    height: 150%;
+    position: absolute;
+    animation: rotate 8s linear infinite;
+    z-index: -10;
+}
+.user-photo-info::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    inset: 8px;
+    border-radius: 5px;
+    z-index: -1;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.user-info{
+    color: #97fb57;
+}
+.table-info-row{
+    color: #97fb57;
+    text-align: left;
+    
+}
+.user-info-table{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.25rem
+}
+.table-info-data{
+    padding-left: 20px;
+}
+.main-profile{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.user-progress{
+    margin: 10px;
+    color: #97fb57;
+    position: relative;
+    background-color: rgba(7, 7, 7,);
+    width: 40%;
+    display: flex;
+    padding: 0px;
+    border-radius: 10px;
+    flex-direction: column;
+    top: 20px;
+    margin: 50px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.user-progress::before{
+    content: "";
+    background-image: linear-gradient(#97fb57, #a3ff9b , #06ffb4 ,#a3ff9b,#97fb57);
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    animation: rotate 4s linear infinite ;
+    z-index: -5;
+}
+.user-progress::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    inset: 8px;
+    border-radius: 5px;
+    z-index: -1;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+.heading-progress{
+    color: #97fb57;
+    font-size: 1.5rem;
+}
+.table-progress{
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.input-table{
+    background-color: transparent;
+    border:1px solid #97fb57;
+    height: 25px;
+    width: 150px;
+    border-radius: 5px;
+    text-indent: 5px;
+    color: #97fb57;
+    font-size: 1rem;
+}
+.table-btn{
+    text-align: center;
+    height:25px;
+    width: fit-content;
+    padding: 3px 10px;
+    background-color: #97fb57;
+    border: none;
+    border-radius: 5px;
+}
+
+.update-btn-td{
+    display: flex;
+    margin-left: 10%;
+    margin-top: 2%;
+}
+#bmiChart{
+    width: 200%;
+}
+@media screen and (max-width:1360px) {
+    .profile-photo{
+        width: 200px;
+        height: 200px;
+    }
+    .user-info-table{
+        font-size: 1rem;
+    }
+    .heading-progress{
+        font-size: 1rem;
+    }
+    .input-table{
+        font-size: 0.8rem;
+    }
+    .table-info-row{
+        font-size: 0.8rem;
+    }
+    #bmiChart{
+        width: 140%;
+        margin-right:10px ;
+    }
+}
+@media screen and (max-width:1080px) {
+    #bmiChart{
+        width: 120%;
+    }
+    .user-photo-info{
+        width: 40%;
+    }
+}
+@media screen and (max-width:930px) {
+    #bmiChart{
+        width: 100%;
+    }
+}
+@media screen and (max-width:860px) {
+    .main-profile{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .user-progress{
+        width: 80%;
+    }
+    .user-photo-info{
+        width: 90%;
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+    #bmiChart{
+        width: 200%;
+    }
+    .profile-photo{
+        width: 70%;
+        height: 70%;
+    }
+    .user-info-table td{
+        font-size: 1.1rem;
+    }
+    
+}
+@media screen and (max-width:750px) {
+    #bmiChart{
+        width: 170%;
+    }
+}
+@media screen and (max-width:670px) {
+    #bmiChart{
+        width: 140%;
+    }
+}
+@media screen and (max-width:420px) {
+    .user-info-table td{
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width:335px) {
+    .user-info-table td{
+        font-size: 0.7rem;
+    }
+}

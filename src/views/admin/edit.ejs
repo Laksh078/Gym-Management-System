@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/edit.css">
+    <link rel="stylesheet" href="/public/css/navbar.css">
+    <link rel="stylesheet" href="/public/css/footer.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>Admin - Edit Your Profile</title>
+</head>
+<body>
+    <%- include('../layouts/admin_header') %>
+    <div class="edit-main">
+        <img src="../../public/userImages/<%= admin.image %>" alt="" width="150px" class="profile-photo">
+    <form action="" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="user_id" id="" value="<%= admin._id %>">
+        <table>
+            <tr>
+                <td>
+                    <label for="UploadButton" class="profile-photo-text">Edit Profile Photo:</label>
+                </td>
+                <td>
+                    <input type="file" name="image" id="UploadButton" accept=".jpg, .jpeg, .png">
+                    <label for="UploadButton" class="UploadButton-label"><img src="/public/assets/images/upload.svg" alt="" width="20px">Upload File</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="firstname" class="profile-photo-text">First Name:</label>
+                </td>
+                <td>
+                    <input type="text" name="firstname" id="firstname" class="input-firstname" value="<%= admin.firstname %>" placeholder="Enter First Name" required>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="lastname" class="profile-photo-text">Last Name:</label>
+                </td>
+                <td>
+                    <input type="text" name="lastname" id="lastname" class="input-firstname" value="<%= admin.lastname %>" placeholder="Enter Last Name" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email" class="profile-photo-text">Email:</label>
+                </td>
+                <td>
+                    <input type="email" name="emailnew" id="emailnew" class="input-firstname" value="" placeholder="Enter Email">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="phone" class="profile-photo-text">Phone Number:</label>
+                </td>
+                <td>
+                    <input type="tel" name="phone" id="phone" class="input-firstname" value="<%= admin.phone %>" placeholder="Enter Phone Number" required>
+                </td>
+            </tr>
+        </table>
+        <input type="submit" name="submit" id="edit-update-profile-btn" value="Update Profile" class="submit-profile">
+    
+        
+    </form>
+    <a href="/admin/change-password" class="change-password">Change Password</a>
+    </div>
+    
+    
+    <%- include('../layouts/admin_footer') %>
+    <script src="/public/javascript/navbar.js"></script>
+</body>
+</html>

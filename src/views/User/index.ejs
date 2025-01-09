@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/trial.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/navbar.css">
+    <title>Gym</title>
+</head>
+
+<body>
+    <% if (sessionID) { %>
+        <%- include('../layouts/home_header') %>
+        
+    <% } else { %>
+        <%- include('../layouts/header') %>
+    <% } %>
+        <div class="main">
+
+        <div class="hero">
+        </div>
+        <div class="box"></div>
+        <div class="hero-text">
+            <div>
+                <% if (sessionID) { %>
+                    <div class="hero-text-large">Welcome, <%= userInfo.firstname %></div>
+                    
+                <% } else { %>
+                    <div class="hero-text-large">Crush your health and fitness goals in no time</div>
+                <% } %>
+                <div class="hero-text-small">It doesn’t matter if your goal is to get stronger, burn fat, or to just
+                    stay fit our world class coaches will guide you every step of the way.</div>
+                <button class="hero-btn" onclick="scrollWindow5()">Start 7 day free trial</button>
+            </div>
+        </div>
+    </div>
+    <div class="down-hero">
+        <div>
+            We offer something for everybody
+        </div>
+    </div>
+    <div class="grid">
+        <div onclick="scrollWindow1()" style="cursor: pointer;">
+            <div class="overlap-1"></div>
+            <div class="grid-item-1"></div>
+            <div class="grid-text-2">CrossFit Group Classes</div>
+        </div>
+        <div onclick="scrollWindow2()" style="cursor: pointer;">
+            <div class="overlap-2"></div>
+            <div class="grid-item-2"></div>
+            <div class="grid-text-2">Strength <br>Training</div>
+        </div>
+        <div onclick="scrollWindow3()" style="cursor: pointer;">
+            <div class="overlap-3"></div>
+            <div class="grid-item-3"></div>
+            <div class="grid-text-2">Personal <br>Training</div>
+        </div>
+        <div onclick="scrollWindow4()" style="cursor: pointer;">
+            <div class="overlap-4"></div>
+            <div class="grid-item-4"></div>
+            <div class="grid-text-2">Member Only Events</div>
+        </div>
+    </div>
+    <div class="first-section">
+        <div class="first-text">
+            <div class="first-text-heading">
+                Group CrossFit Classes
+            </div>
+            <div class="first-text-sub-heading">
+                Get fit while having fun with our group CrossFit classes
+            </div>
+            <div class="ticked-text">
+                <img src="/public/assets/images/green_tick.svg" alt="">
+                <div>Just 30 minutes long</div>
+            </div>
+            <div class="ticked-text">
+                <img src="/public/assets/images/green_tick.svg" alt="">
+                <div>Warm up & workout included</div>
+            </div>
+            <div class="ticked-text">
+                <img src="/public/assets/images/green_tick.svg" alt="">
+                <div>Fun is guaranteed</div>
+            </div>
+        </div>
+        <img src="/public/assets/images/istockphoto-1088471402-612x612.jpg" alt="">
+    </div>
+    <div class="second-section">
+        <img src="/public/assets/images/62745cde8be7db0299512de0_empty gym with strength equipment.png" alt="" class="second-section-img">
+        <div class="second-text">
+            <div class="first-text-heading" style="width: 170px;">
+                Strength Training
+            </div>
+            <div class="first-text-sub-heading">
+                Crush any strength program with our suite of strength equipment
+            </div>
+            <div class="ticked-text">
+                <img src="/public/assets/images/green_tick.svg" alt="">
+                <div>Fully fitted powerlifting and strongman section</div>
+            </div>
+            <div class="ticked-text">
+                <img src="/public/assets/images/green_tick.svg" alt="">
+                <div>Olympic lifting platforms, weights, and bars</div>
+            </div>
+            <div class="ticked-text">
+                <img src="/public/assets/images/green_tick.svg" alt="">
+                <div>Dumbells ranging 2kg - 110kg</div>
+            </div>
+        </div>
+    </div>
+    <div class="third-section">
+        <div class="second-text" style="margin-left: 0px; margin-right: 10px;">
+            <div class="first-text-heading" style="width: 170px;">
+                Personal Training
+            </div>
+            <div class="first-text-sub-heading">
+                Be guided every step of the way with one of our world class coaches
+            </div>
+            <div class="third-coach-info">
+                We have coaches in each of the following categories:
+            </div>
+            <div class="ticked-text">
+                <img src="/public/assets/images/green_tick.svg" alt="">
+                <div>Weightloss</div>
+            </div>
+            <div class="ticked-text">
+                <img src="/public/assets/images/green_tick.svg" alt="">
+                <div>Competitive CrossFit</div>
+            </div>
+            <div class="ticked-text">
+                <img src="/public/assets/images/green_tick.svg" alt="">
+                <div>Powerlifting</div>
+            </div>
+        </div>
+        <img src="/public/assets/images/62745cde25697910438012db_personal trainer training woman.png" alt="">
+    </div>
+    <div class="second-section" style="margin-bottom: 100px;">
+        <img src="/public/assets/images/62745cde11a53ce362d37ecc_athlete jumping over bar.png" alt="" class="second-section-img">
+        <div class="second-text" style="margin-right: 20px;">
+            <div class="first-text-heading" style="width: 200px;">
+                Member Only Events
+            </div>
+            <div class="first-text-sub-heading">
+                Make new friends and get competitive with fun member events
+            </div>
+            <div class="ticked-text">
+                <img src="/public/assets/images/green_tick.svg" alt="">
+                <div>Friendly competitions</div>
+            </div>
+            <div class="ticked-text">
+                <img src="/public/assets/images/green_tick.svg" alt="">
+                <div>Monthly challenges</div>
+            </div>
+            <div class="ticked-text">
+                <img src="/public/assets/images/green_tick.svg" alt="">
+                <div>Summer potlucks and games</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-and-image-main">
+        <div class="seven-day-free-trial">7 Day Free Trial Form</div>
+        <div class="form-and-image">
+            <form action="/trial" class="form" method="post">
+                <h1>Claim your 7 day free trial</h1>
+                <input type="text" name="name" id="name" placeholder="Name" required>
+                <input type="text" name="email" id="email" placeholder="Email" required>
+                <input type="text" name="phone" id="phone-number" placeholder="Phone Number" required>
+                <select id="select" name="intrest">
+                    <option value="Membership intrest...">Membership intrest...</option>
+                    <option value="Month to Month">Month to Month</option>
+                    <option value="6 Month">6 Month</option>
+                    <option value="1 Year">1 Year</option>
+                    <option value="Else">Else</option>
+                </select>
+                <input type="submit" name="" id="submit">
+            </form>
+            <div class="form-image">
+                <img src="/public/assets/images/906a5e40cf53d97f06ac808240f99e03.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    </div>
+    <%- include('../layouts/footer') %>
+    <script src="/public/javascript/index.js"></script>
+    <script src="/public/javascript/navbar.js"></script>
+</body>
+
+</html>

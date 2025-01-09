@@ -1,0 +1,58 @@
+.membership-main{
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.membership-content{
+    text-align: left;
+    justify-content: left;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-left: 30px;
+}
+.container{
+    width: 100%; 
+    margin-left: 20px; 
+    display: flex; 
+    justify-content: space-between;
+}
+.returnCart{
+    width: 25vw;
+}
+h1{
+    text-align: center;
+}
+.list{
+    display: flex; 
+    width: 25vw;
+}
+.item-checkout{
+    display: grid;
+    grid-template-columns: 1fr; 
+    width: 25vw; 
+    box-shadow: 5px 5px 5px 5px #97fb57;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 0 10px;
+    border-radius: 20px;
+}
+h2{
+    margin-top: 15px; 
+    color: #97fb57;
+}
+.membership-text-2{
+    margin-top: 20px;
+}
+.img-cross{
+    height: 25px;
+}
+.right{
+    min-width: 200px;
+    max-width: 400px;
+}
+
+@media screen and (max-width: 990px) {
+    .checkoutLayout{
+        flex-direction: column;
+    }
+}

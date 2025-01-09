@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/products.css">
+    <link rel="stylesheet" href="/public/css/navbar.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/membership.css">
+    <link rel="stylesheet" href="/public/css/membership_checkout.css">
+    <title>CheckOut</title>
+</head>
+<body>
+    
+    
+
+    <div class="container">
+        <div class="checkoutLayout">
+            <div class="returnCart">
+                <a href="/membership"><img src="/public/assets/images/back.svg" alt="">&nbsp;Back</a>
+                <h1>Membership</h1>
+                <div class="list" style="min-width: 250px; max-width: 300px;">
+                    <div class="item-checkout" style="min-width: 250px; max-width: 300px;">
+                        <div class="info">
+                            <div class="name">
+                                <% if (membership == 1) {
+                                    %>
+                                    <div class="membership-main" >
+                                        <h2>Month to Month</h2>
+                                        <div style="margin-bottom: 10px;"></div>
+                                    <div class="membership-content">
+                                        <img src="/public/assets/images/green_tick.svg" alt="">
+                                        <div class="membership-text">All classes</div>
+                                    </div>
+                                    <div class="membership-content">
+                                        <img src="/public/assets/images/green_tick.svg" alt="">
+                                        <div class="membership-text">All member events</div>
+                                    </div>
+                                    <div class="membership-content">
+                                        <img src="/public/assets/images/green_tick.svg" alt="">
+                                        <div class="membership-text">Full gym access</div>
+                                    </div>
+                                    <div class="membership-content">
+                                        <img src="/public/assets/images/cross.svg" alt="" class="img-cross">
+                                        <div class="membership-text">Online Training</div>
+                                    </div>
+                                    <div class="membership-content">
+                                        <img src="/public/assets/images/cross.svg" alt="" class="img-cross">
+                                        <div class="membership-text">Free Trainer</div>
+                                    </div>
+                                    
+                                    <div class="membership-text-2">
+                                        Charges every month <br> unless you cancel
+                                    </div>
+                                    </div>
+                                    <%
+                                } else if (membership == 2){
+                                    %>
+                                    <div class="membership-main">
+                                        <h2>6 Months </h2>
+                                        <div style="margin-bottom: 10px;"></div>
+                                    <div class="membership-content">
+                                        <img src="/public/assets/images/green_tick.svg" alt="">
+                                        <div class="membership-text">All classes</div>
+                                    </div>
+                                    <div class="membership-content">
+                                        <img src="/public/assets/images/green_tick.svg" alt="">
+                                        <div class="membership-text">All member events</div>
+                                    </div>
+                                    <div class="membership-content">
+                                        <img src="/public/assets/images/green_tick.svg" alt="">
+                                        <div class="membership-text">Full gym access</div>
+                                    </div>
+                                    <div class="membership-content">
+                                        <img src="/public/assets/images/green_tick.svg" alt="">
+                                        <div class="membership-text">Online Training</div>
+                                    </div>
+                                    <div class="membership-content">
+                                        <img src="/public/assets/images/cross.svg" alt="" class="img-cross">
+                                        <div class="membership-text">Free Trainer</div>
+                                    </div>
+                                    
+                                    <div class="membership-text-2">
+                                        Charges every 6 month <br> unless you cancel
+                                    </div>
+                                    </div>
+                                    <%
+                                } else{
+                                    %>
+                                    <div class="membership-main">
+                                        <h2>One Year</h2>
+                                        
+                                    <div class="membership-content">
+                                        <img src="/public/assets/images/green_tick.svg" alt="">
+                                        <div class="membership-text">All classes</div>
+                                    </div>
+                                    <div class="membership-content">
+                                        <img src="/public/assets/images/green_tick.svg" alt="">
+                                        <div class="membership-text">All member events</div>
+                                    </div>
+                                    <div class="membership-content">
+                                        <img src="/public/assets/images/green_tick.svg" alt="">
+                                        <div class="membership-text">Full gym access</div>
+                                    </div>
+                                    <div class="membership-content">
+                                        <img src="/public/assets/images/green_tick.svg" alt="">
+                                        <div class="membership-text">Online Training</div>
+                                    </div>
+                                    <div class="membership-content">
+                                        <img src="/public/assets/images/green_tick.svg" >
+                                        <div class="membership-text">Free Trainer</div>
+                                    </div>
+                                    
+                                    <div class="membership-text-2" >
+                                        Charges every 6 month <br> unless you cancel
+                                    </div>
+                                    </div>
+                                    <%
+                                }%>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+    
+            <div class="right" style="margin-right: 0;">
+                <h1>Checkout</h1>
+    
+                <form class="form" method="post">
+                    <div class="group">
+                        <label for="name">Full Name</label>
+                        <input type="text" name="name" id="name" value="<%= userInfo.firstname +" "+ userInfo.lastname %>">
+                    </div>
+        
+                    <div class="group">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" name="phone" id="phone" value="<%= userInfo.phone %>">
+                    </div>
+        
+                    <div class="group">
+                        <label for="address">Address</label>
+                        <input type="text" name="address" id="address">
+                    </div>
+        
+                    <div class="group">
+                        <label for="country">Country</label>
+                        <select name="country" id="country" style="margin-right: 0px;">
+                            <option value="">Choose..</option>
+                            <option value="">India</option>
+                        </select>
+                    </div>
+        
+                    <div class="group">
+                        <label for="city">City</label>
+                        <select name="city" id="city">
+                            <option value="">Choose..</option>
+                            <option value="">Bokaro Steel City</option>
+                            <option value="">Ranchi</option>
+                            <option value="">Jamshedpur</option>
+                            <option value="">Kolkata</option>
+                            <option value="">Mumbai</option>
+                            <option value="">Delhi</option>
+                            <option value="">Patna</option>
+                        </select>
+                    </div>
+                
+                <div class="return" style="border-top: 1px solid #7a7fe2; width: 100%; grid-column-start: 1; grid-column-end: 3;" >
+                    <div class="row">
+                        <div>Base Price</div>
+                        <div>
+                            <% if (membership==1) {
+                                %>
+                                    <div>₹949</div>
+                                <%
+                            } else if(membership==2){
+                                %>
+                                    <div>₹5094</div>
+                                <%
+                            } else{
+                                %>
+                                    <div>₹8988</div>
+                                <%
+                            } %>    
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>Added Charges</div>
+                        <div>0</div>
+                    </div>
+                    <div class="row">
+                        <div>Total Price</div>
+                        <div class="totalPrice">
+                            <% if (membership==1) {
+                                %>
+                                    <div>₹949</div>
+                                <%
+                            } else if(membership==2){
+                                %>
+                                    <div>₹5094</div>
+                                <%
+                            } else{
+                                %>
+                                    <div>₹8988</div>
+                                <%
+                            } %>    
+                        </div>
+                    </div>
+                </div>
+                <div class="group" style="grid-column-start: 1; grid-column-end: 3; ">
+                    <input type="submit" value="CHECKOUT" class="buttonCheckoutMembership" style="background-color: #49D8B9; height: 40px;">
+                </div>
+                
+            </form>
+        </div>
+        </div>
+    </div>
+    
+    
+    <!-- <script src="/javascript/checkout.js"></script> -->
+    
+
+    
+</body>
+</html>

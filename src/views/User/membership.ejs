@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/footer.css">
+    <link rel="stylesheet" href="/public/css/membership.css">
+    <link rel="stylesheet" href="/public/css/navbar.css">
+    <title>Membership</title>
+</head>
+
+<body>
+    <% if (sessionID) { %>
+        <%- include('../layouts/home_header') %>
+        
+    <% } else { %>
+        <%- include('../layouts/header') %>
+    <% } %>
+    <div class="main">
+
+        <div class="membership-topic">
+            <div>Memberships</div>
+        </div>
+        <div class="membership-topic-subheading">
+            Crushing your health and fitness <br>goals starts here...
+        </div>
+        <div class="membership-grid">
+            <div class="one-month">
+                <div class="box-heading">Month to <br>Month</div>
+                <div class="pricing">
+                    ₹949 
+                    <div class="pricing-month">
+                        /mo
+                    </div>
+                </div>
+                <div style="margin-bottom: 30px;">
+                    <div class="membership-content">
+                        <img src="/public/assets/images/green_tick.svg" alt="">
+                        <div class="membership-text">All classes</div>
+                    </div>
+                    <div class="membership-content">
+                        <img src="/public/assets/images/green_tick.svg" alt="">
+                        <div class="membership-text">All member events</div>
+                    </div>
+                    <div class="membership-content">
+                        <img src="/public/assets/images/green_tick.svg" alt="">
+                        <div class="membership-text">Full gym access</div>
+                    </div>
+                    <div class="membership-content">
+                        <img src="/public/assets/images/cross.svg" alt="">
+                        <div class="membership-text">Online Trainings</div>
+                    </div>
+                    <div class="membership-content">
+                        <img src="/public/assets/images/cross.svg" alt="">
+                        <div class="membership-text">Free Trainer</div>
+                    </div>
+                </div>
+                <div class="membership-text-2">
+                    Charges every month <br> unless you cancel
+                </div>
+                <a href="/membership/checkout?value=1"><button class="seven-day-trial-btn">Buy Now</button></a>
+            </div>
+            <div class="six-month">
+                <div class="box-heading">6 Month <br> Membership</div>
+                <div class="pricing">
+                    ₹849 
+                    <div class="pricing-month">
+                        /mo
+                    </div>
+                </div>
+                <div style="margin-bottom: 30px;">
+                    <div class="membership-content">
+                        <img src="/public/assets/images/green_tick.svg" alt="">
+                        <div class="membership-text">All classes</div>
+                    </div>
+                    <div class="membership-content">
+                        <img src="/public/assets/images/green_tick.svg" alt="">
+                        <div class="membership-text">All member events</div>
+                    </div>
+                    <div class="membership-content">
+                        <img src="/public/assets/images/green_tick.svg" alt="">
+                        <div class="membership-text">Full gym access</div>
+                    </div>
+                    <div class="membership-content">
+                        <img src="/public/assets/images/green_tick.svg" alt="">
+                        <div class="membership-text">Online Training</div>
+                    </div>
+                    <div class="membership-content">
+                        <img src="/public/assets/images/cross.svg" alt="">
+                        <div class="membership-text">Free Trainer</div>
+                    </div>
+                </div>
+                <div class="membership-text-2">
+                    Charges every 6 month <br> unless you cancel
+                </div>
+                <a href="/membership/checkout?value=2"><button class="seven-day-trial-btn">Buy Now</button></a>
+            </div>
+            <div class="one-year">
+                <div class="box-heading">1 Year <br> Membership</div>
+                <div class="pricing">
+                    ₹749 
+                    <div class="pricing-month">
+                        /mo
+                    </div>
+                </div>
+                <div style="margin-bottom: 30px;">
+                    <div class="membership-content">
+                        <img src="/public/assets/images/green_tick.svg" alt="">
+                        <div class="membership-text">All classes</div>
+                    </div>
+                    <div class="membership-content">
+                        <img src="/public/assets/images/green_tick.svg" alt="">
+                        <div class="membership-text">All member events</div>
+                    </div>
+                    <div class="membership-content">
+                        <img src="/public/assets/images/green_tick.svg" alt="">
+                        <div class="membership-text">Full gym access</div>
+                    </div>
+                    <div class="membership-content">
+                        <img src="/public/assets/images/green_tick.svg" alt="">
+                        <div class="membership-text">Online Training</div>
+                    </div>
+                    <div class="membership-content">
+                        <img src="/public/assets/images/green_tick.svg" alt="">
+                        <div class="membership-text">Free Trainer</div>
+                    </div>
+                </div>
+                <div class="membership-text-2">
+                    Charges every year <br> unless you cancel
+                </div>
+                <a href="/membership/checkout?value=3"><button class="seven-day-trial-btn">Buy Now</button></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="seperator"></div>
+    <%- include('../layouts/footer') %>
+</body>
+<script src="/public/javascript/navbar.js"></script>
+
+</html>

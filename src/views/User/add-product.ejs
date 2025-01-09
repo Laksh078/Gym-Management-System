@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/edit.css">
+    <link rel="stylesheet" href="/public/css/navbar.css">
+    <title>Add Product</title>
+</head>
+<body>
+    <%- include('../layouts/home_header') %>
+
+    <div class="container" style=" margin-top: 100px;">
+        <div class="login-form" style=" position: static;" >
+            <form action="" method="post" enctype="multipart/form-data" style="position: static;">
+                <div class="login-text">Add Product</div>
+                <img id="imagePreview" src="" alt="Image preview" style="width: 200px; z-index: 1; display: none;" class="imagePreview">
+                <label for="" style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <label for="" style="color: #ffffff; margin-right: 5px; font-size: 1.15rem;" >Product image: </label>                 
+                    <input type="file" name="image" id="UploadButton" accept=".jpg, .jpeg, .png">
+                    <label for="UploadButton" class="UploadButton-label" ><img src="/public/assets/images/upload.svg" alt="" style="position: static; width:20px ; z-index: 1;"><div>Upload File</div></label>
+                </label>
+                <label for="">                    
+                    <input type="text" placeholder="Product Name" id="username" name="product" required>
+                </label>
+                <label for="">                    
+                    <input type="text" placeholder="Price" id="username" name="price">
+                </label>                
+                </label>
+                <input type="submit" id="edit-update-profile-btn" value="Add Product" style="width: 120px;"> 
+                <% if (typeof message !== 'undefined') {
+                    %>
+                    <h4 style="color: #97fb57;"><%= message %></h4>
+                    <%
+                } %>
+            </form>
+        </div>
+    </div>
+
+<%- include('../layouts/admin_footer') %>
+
+</body>
+<script src="/public/javascript/imagePreview.js"></script>
+<script src="/public/javascript/navbar.js"></script>
+</html>

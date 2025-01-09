@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/login.css">
+    <link rel="stylesheet" href="/public/css/navbar.css">
+    <title>Admin - Forgot Passowrd</title>
+</head>
+
+<body>
+    <%- include('../layouts/header') %>
+
+        <div class="container">
+            <div class="login-form">
+                <form action="/admin/forget" method="post">
+                    <div class="login-text">Forgot Password?</div>
+                    <label for="">                    
+                        <input type="text" placeholder="Enter Registered Email" id="username" name="email" required>
+                    </label>
+                    <input type="submit" id="submit" style="margin-top: 5px;" value="Next">
+                    <% if (typeof message !== 'undefined') {
+                        %>
+                            <div style="color: white;margin-top: -5px;" class="forget-message"><%= message %></div>
+                        <%
+                    }  %>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/public/javascript/login.js"></script>
+</body>
+
+</html>

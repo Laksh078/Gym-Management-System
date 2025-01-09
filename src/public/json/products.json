@@ -1,0 +1,34 @@
+[
+  {
+    "_id": "67089981bf3214dc48257014",
+    "Owner": "webworks.itclub@gmail.com",
+    "name": "Lakshya",
+    "price": 6000,
+    "image": "1728616833275-Annotation 2024-09-03 200355.png",
+    "__v": 0
+  },
+  {
+    "_id": "67089b4b2b330edc4970c6cb",
+    "Owner": "webworks.itclub@gmail.com",
+    "name": "Lakshya",
+    "price": 6000,
+    "image": "1728617291103-Annotation 2024-08-24 203354.png",
+    "__v": 0
+  },
+  {
+    "_id": "6708a4e02b330edc4970c6d9",
+    "Owner": "webworks.itclub@gmail.com",
+    "name": "Lakshya",
+    "price": 6000,
+    "image": "1728619735174-Annotation 2024-08-24 203354.png",
+    "__v": 0
+  },
+  {
+    "_id": "670a023f97e12a5db304c797",
+    "Owner": "webworks.itclub@gmail.com",
+    "name": "Creatine",
+    "price": 1599,
+    "image": "1728709183822-Annotation 2024-07-20 154539.png",
+    "__v": 0
+  }
+]

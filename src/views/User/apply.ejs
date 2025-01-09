@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/navbar.css">
+    <link rel="stylesheet" href="/public/css/signup.css">
+    <title>Apply For Selling Account</title>
+</head>
+<body>
+
+    <%- include('../layouts/home_header') %>
+
+    <div class="container">
+        <div class="login-form">
+            <form action="" method="post">
+                <div class="login-text">Apply For a Selling Account</div>
+                <div class="signup-grid">
+                    <input type="text" placeholder="First Name" name="firstname" class="username" value="<%= userInfo.firstname %>" required>
+                    <input type="text" placeholder="Last Name" name="lastname" class="username" value="<%= userInfo.lastname %>" required>
+                    <input type="text" placeholder="Phone Number" name="phone" class="username" value="<%= userInfo.phone %>" required>
+                    <input type="email" placeholder="Email" name="email" class="username" value="<%= userInfo.email %>" required>
+                    <textarea type="text" placeholder="Some Description Why You Want a Seller Account" name="description" class="sellerDescription" required></textarea>
+                    
+                </div>
+                <%
+                    
+                       if (typeof message  !== 'undefined') {
+                        %>
+                            <div class="registration-message" style=" color: #97fb57;text-align: left;margin-top: 5px;margin-bottom: 5px;"><%= message %></div>
+                        <%
+                       }
+
+                    %>
+                <input type="submit" id="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <%- include('../layouts/footer') %>
+
+
+    <script src="/public/javascript/navbar.js"></script>
+</body>
+
+</html>

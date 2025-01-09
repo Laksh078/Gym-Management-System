@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/login.css">
+    <link rel="stylesheet" href="/public/css/navbar.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <%- include('../layouts/header') %>
+
+        <div class="container">
+            <div class="login-form">
+                <form action="/login" method="post">
+                    <div class="login-text">Log In</div>
+                    <label for="">                    
+                        <input type="text" placeholder="Email" id="username" name="email" required>
+                    </label>
+                    <label for="" id="label-password"> 
+                        <input type="password" placeholder="Passowrd" id="password" name="password" required>
+                        <img src="assets/images/eye.svg" alt="" id="show">
+                    </label>
+                    <div style="display: flex;" class="forget-password">
+                    <div class="forget-password-item"><a href="/forget">Forgot Password?</a></div>
+                    <div class="forget-password-item" ><a href="/resend-verification">Veriy Your Mail</a></div></div>
+                    <div class="dont-have-account"><div>Don't have an account? &nbsp;</div> <a href="/signup">Sign up</a></div>
+                    <input type="submit" id="submit">
+                    <div class="forget-message">
+                        <% if (typeof message !== 'undefined') {
+                            %>
+                                <h4 style="color: white;"><%= message %></h4>
+                            <%
+                        }  %>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/public/javascript/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+footer{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+    font-size: 1.125rem;
+}
+footer>img{
+    width: 150px;
+}
+.footer-links{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+.footer-links div a{
+    text-decoration: none;
+    color: #ffffff;
+}

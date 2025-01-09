@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/navbar.css">
+    <title>Admin - Home</title>
+</head>
+
+<body>
+    <%- include('../layouts/admin_header') %>
+
+        <div class="main">
+
+            <div class="hero">
+            </div>
+            <div class="box"></div>
+            <div class="hero-text">
+                <div>
+
+                    <div class="hero-text-large" style="margin-bottom: 10px;">Hello, <%= admin.firstname %>.</div>
+                    <div class="hero-text-large" >Welcome to the admin panel</div>
+                    <button class="hero-btn" style="width: fit-content; padding: 5px 15px;"><a href="/admin/dashboard" style="text-decoration: none; color: black;">Go To User Dashboard</a></button>
+                </div>
+            </div>
+        </div>
+
+
+        <%- include('../layouts/admin_footer') %>
+            <script src="/public/javascript/navbar.js"></script>
+</body>
+
+</html>
