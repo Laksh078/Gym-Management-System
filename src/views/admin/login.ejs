@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="/public/css/login.css">
     <link rel="stylesheet" href="/public/css/navbar.css">
     <title>Admin - Login</title>
+    <style>
+        #show{
+            top: 153px;
+        }
+    </style>
 </head>
 <body>
     <%- include('../layouts/admin_login_header') %>
@@ -19,7 +24,7 @@
                 </label>
                 <label for="" id="label-password"> 
                     <input type="password" placeholder="Passowrd" id="password" name="password" required>
-                    <img src="/public/assets/images/eye.svg" alt="" id="show1">
+                    <img src="/public/assets/images/eye.svg" alt="" id="show" style="top: 153px;">
                 </label>
                 <div style="display: flex;" class="forget-password">
                 <div class="forget-password-item"><a href="/admin/forget">Forgot Password?</a></div>
